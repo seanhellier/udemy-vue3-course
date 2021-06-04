@@ -1,13 +1,17 @@
-console.log("hey vue");
-
 const app = Vue.createApp({
 	data() {
 		return {
-			title: `The Final Empire`,
-			author: `Stephen King`,
-			age: `50`,
+			title: "The Way of Kings",
+			author: "Brandon Sanderson",
+			age: 45,
 		};
+	},
+	methods: {
+		changeTitle(title) {
+			// this.title = 'Words of Radiance'
+			this.title = title;
+		},
 	},
 });
 
-app.mount(`#app`);
+app.mount("#app");
