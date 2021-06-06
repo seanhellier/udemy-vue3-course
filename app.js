@@ -5,6 +5,8 @@ const app = Vue.createApp({
 			title: "The Way of Kings",
 			author: "Brandon Sanderson",
 			age: 45,
+			x: 0,
+			y: 0,
 		};
 	},
 	methods: {
@@ -12,8 +14,15 @@ const app = Vue.createApp({
 			// this.title = 'Words of Radiance'
 			this.showBooks = !this.showBooks;
 		},
-		handleEvent() {
-			console.log("event");
+		handleEvent(e, data) {
+			console.log(e, e.type);
+			if (data) {
+				console.log(data);
+			}
+		},
+		handleMousemove(e) {
+			this.x = e.offsetX;
+			this.y = e.offsetY;
 		},
 	},
 });
