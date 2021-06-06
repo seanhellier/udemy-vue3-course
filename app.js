@@ -12,6 +12,9 @@ const app = Vue.createApp({
 			// this.title = 'Words of Radiance'
 			this.showBooks = !this.showBooks;
 		},
+		handleEvent() {
+			console.log("event");
+		},
 	},
 });
 
